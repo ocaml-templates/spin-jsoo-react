@@ -49,15 +49,9 @@
 
 (post_gen
   (actions 
-    (run yarn install))
-  (message "🎁  Installing packages. This might take a couple minutes.")
-  (enabled_if (not (run which yarn))))
-
-(post_gen
-  (actions 
-    (run npm install))
-  (message "🎁  Installing packages. This might take a couple minutes.")
-  (enabled_if (run which yarn)))
+    (run make dev)
+    (run make build))
+  (message "🎁  Installing packages. This might take a couple minutes."))
 
 (post_gen
   (actions
@@ -65,15 +59,9 @@
   (enabled_if (eq :syntax OCaml)))
 
 (example_commands
-  (commands 
-    ("yarn start" "Start the development server.")
-    ("yarn build" "Bundle the app into static files for production.")
-    ("yarn test" "Start the test runner."))
-  (enabled_if (not (run which yarn))))
-
-(example_commands
-  (commands 
-    ("npm start" "Start the development server.")
-    ("npm build" "Bundle the app into static files for production.")
-    ("npm test" "Start the test runner."))
-  (enabled_if (run which yarn)))
+  (commands
+    ("make dev" "Download runtime and development dependencies.")
+    ("make start" "Start the compiler development web server in watch mode.")
+    ("make build" "Build the dependencies and the project.")
+    ("make test" "Starts the test runner."))
+  (enabled_if (eq :package_manager Opam)))
