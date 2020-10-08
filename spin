@@ -63,5 +63,4 @@
     ("make dev" "Download runtime and development dependencies.")
     ("make start" "Start the compiler development web server in watch mode.")
     ("make build" "Build the dependencies and the project.")
-    ("make test" "Starts the test runner."))
-  (enabled_if (eq :package_manager Opam)))
+    ("make test" "Starts the test runner.")))
