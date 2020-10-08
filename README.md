@@ -18,3 +18,4 @@ This template is very experimental and incomplete.
 
 - [ ] Support CSS without TailwindCSS
 - [ ] Add unit tests
+- [ ] Add support for Esy
