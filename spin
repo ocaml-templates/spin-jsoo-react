@@ -55,7 +55,9 @@
 
 (post_gen
   (actions
-    (refmt src/*.re src/*.rei src/*/*.re src/*/*.rei))
+    (run bash -c "opam exec -- refmt -p ml --in-place src/*.re src/*.rei src/*/*.re")
+    (run bash -c "for f in src/*.re src/**/*.re; do mv -- \"$f\" \"${f%.re}.ml\"; done")
+    (run bash -c "for f in src/*.rei; do mv -- \"$f\" \"${f%.rei}.mli\"; done"))
   (enabled_if (eq :syntax OCaml)))
 
 (example_commands

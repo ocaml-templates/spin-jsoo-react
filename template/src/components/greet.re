@@ -12,7 +12,7 @@ let make = (~name) => {
     {%- else -%}
     ""
     {%- endif %}>
-      {React.string({j|👋 Welcome $name! You can edit me in |j})}
+      {React.string("👋 Welcome " ++ name ++ "! You can edit me in ")}
       <code> {React.string("src/components/Greet.re")} </code>
     </p>
     <a
