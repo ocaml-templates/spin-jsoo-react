@@ -48,7 +48,6 @@ dev: ## Install development dependencies
 .PHONY: build
 build: ## Build the project, including non installable libraries and executables
 	opam exec -- dune build --root .
-	npm run build
 
 .PHONY: install
 install: all ## Install the packages on the system
