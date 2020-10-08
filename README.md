@@ -1,17 +1,20 @@
-# Spin ReScript
+# Spin Js_of_ocaml React
 
-A [Spin](https://github.com/tmattio/spin) template to generate new ReScript project.
+A [Spin](https://github.com/tmattio/spin) template to generate new React application with Js_of_ocaml.
 
 ```bash
-spin new https://github.com/tmattio/spin-rescript.git
+spin new https://github.com/tmattio/spin-jsoo-react.git
 ```
 
 ## Acknowledgments
 
-This template is inspired by these awesome projects:
+This template uses the amazing bindings to ReactJS for js_of_ocaml of [jchavarri](https://github.com/jchavarri/):
 
-- [create-react-app](https://github.com/facebook/create-react-app) - Set up a modern web app by running one command.
+- [jsoo-react](https://github.com/jchavarri/jsoo-react) - Bindings to ReactJS for js_of_ocaml, including JSX ppx.
 
-And these amazing articles:
+## To Do
 
-- [ReasonML: Safe Routing](https://blog.minima.app/posts/2020/reasonml-safe-routing)
+This template is very experimental and incomplete.
+
+- [ ] Support CSS without TailwindCSS
+- [ ] Add unit tests
