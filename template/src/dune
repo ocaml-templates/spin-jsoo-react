@@ -1,0 +1,8 @@
+(executables
+ (names index)
+ (modes js)
+ (libraries gen_js_api lwt js_of_ocaml-lwt jsoo-react.lib)
+ (preprocess
+  (pps gen_js_api.ppx jsoo-react.ppx js_of_ocaml-ppx)))
+
+(include_subdirs unqualified)
