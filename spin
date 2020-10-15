@@ -21,6 +21,9 @@
 (config username
   (input (prompt "Name of the author")))
 
+(config github_username
+  (input (prompt "GitHub username")))
+
 (config syntax
   (select
     (prompt "Which syntax do you use?")

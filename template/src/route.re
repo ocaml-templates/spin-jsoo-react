@@ -1,7 +1,7 @@
 type t =
   | Home;
 
-let fromUrl = (url: ReactRouter.url) =>
+let fromUrl = (url: React.Router.url) =>
   switch (url.path) {
   | [] => Some(Home)
   | _ => None

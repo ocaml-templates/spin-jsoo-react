@@ -1,7 +1,7 @@
 type t =
   | Home;
 
-let fromUrl: ReactRouter.url => option(t);
+let fromUrl: React.Router.url => option(t);
 
 type t';
 
