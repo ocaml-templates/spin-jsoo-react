@@ -77,6 +77,10 @@ doc: ## Generate odoc documentation
 servedoc: doc ## Open odoc documentation with default web browser
 	$(BROWSER) _build/default/_doc/_html/index.html
 
+.PHONY: check_format
+check_format: ## Use ocamlformat to check if the codebase is properly formatted
+	opam exec -- dune build --root . @fmt
+
 .PHONY: format
 format: ## Format the codebase with ocamlformat
 	opam exec -- dune build --root . --auto-promote @fmt

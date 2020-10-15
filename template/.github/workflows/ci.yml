@@ -58,7 +58,7 @@ jobs:
         run: make build
 
       - name: Check formatting
-        run: make format
+        run: make check_format
 
       - name: Run tests
         run: make test
