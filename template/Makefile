@@ -45,6 +45,11 @@ dev: ## Install development dependencies
 	npm install
 	opam install --deps-only --with-test --with-doc -y .
 
+.PHONY: create_switch
+create_switch:
+  # Create a local opam switch
+	opam switch create . 4.10.0 --deps-only --with-test
+
 .PHONY: build
 build: ## Build the project, including non installable libraries and executables
 	opam exec -- dune build --root .

@@ -2,20 +2,24 @@
 
 ## Setup your development environment
 
-All the dependencies can be install via your favorite package manager:
+1. (Optional) Create an opam [local switch](https://opam.ocaml.org/blog/opam-20-tips/#Local-switches) by running:
 
 ```bash
-yarn install
-# Or
-npm install
+make create_switch
 ```
 
-That's it! You're up and running, you can start the project with:
+_Note: you can ignore this step if you prefer to use the global opam switch._
+
+2. Get all dependencies:
 
 ```bash
-yarn start
-# Or
-npm run start
+make dev
+```
+
+3. Build and start a local server:
+
+```bash
+make start
 ```
 
 ### Running Tests

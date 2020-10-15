@@ -1,6 +1,8 @@
-let useRouter = () => ReactRouter.useUrl() |> Route.fromUrl;
+module Router = React.Router;
+module Event = React.Event;
+let useRouter = () => Router.useUrl() |> Route.fromUrl;
 
-let push = route => route |> Route.toString |> ReactRouter.push;
+let push = route => route |> Route.toString |> Router.push;
 
 module Link = {
   [@react.component]
@@ -10,14 +12,14 @@ module Link = {
     <a
       href=location
       onClick={event =>
-        if (!ReactEvent.Mouse.defaultPrevented(event)
-            && ReactEvent.Mouse.button(event) == 0
-            && !ReactEvent.Mouse.altKey(event)
-            && !ReactEvent.Mouse.ctrlKey(event)
-            && !ReactEvent.Mouse.metaKey(event)
-            && !ReactEvent.Mouse.shiftKey(event)) {
-          event |> ReactEvent.Mouse.preventDefault;
-          location |> ReactRouter.push;
+        if (!Event.Mouse.defaultPrevented(event)
+            && Event.Mouse.button(event) == 0
+            && !Event.Mouse.altKey(event)
+            && !Event.Mouse.ctrlKey(event)
+            && !Event.Mouse.metaKey(event)
+            && !Event.Mouse.shiftKey(event)) {
+          event |> Event.Mouse.preventDefault;
+          location |> Router.push;
         }
       }>
       children
