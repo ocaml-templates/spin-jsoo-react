@@ -38,8 +38,7 @@ all:
 
 .PHONY: dev
 dev: ## Install development dependencies
-	opam pin add -y gen_js_api https://github.com/jchavarri/gen_js_api.git#typ_var
-	opam pin add -y jsoo-react https://github.com/jchavarri/jsoo-react.git
+	opam pin add -y jsoo-react https://github.com/ml-in-barcelona/jsoo-react.git
 	opam pin add -y ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git
 	opam install -y merlin ocamlformat utop ocaml-lsp-server
 	npm install

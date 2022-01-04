@@ -10,7 +10,7 @@ spin new https://github.com/tmattio/spin-jsoo-react.git
 
 This template uses the amazing bindings to ReactJS for js_of_ocaml of [jchavarri](https://github.com/jchavarri/):
 
-- [jsoo-react](https://github.com/jchavarri/jsoo-react) - Bindings to ReactJS for js_of_ocaml, including JSX ppx.
+- [jsoo-react](https://github.com/ml-in-barcelona/jsoo-react) - Bindings to ReactJS for js_of_ocaml, including JSX ppx.
 
 ## To Do
 
